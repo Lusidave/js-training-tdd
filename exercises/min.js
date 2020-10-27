@@ -11,17 +11,17 @@
 
 // Your code:
     function min(number1, number2){
-        if (number1 < number2) {
-            return number1
-        } else{
-            return number2
-        }
+        
+        return (number1 < number2)? number1:(number2 < number1)? number2 : "les deux nombres sont égaux" 
     }
+    
+    
 
 //* Begin of tests
 const assert = require('assert');
 
 assert.strictEqual(typeof min, 'function');
+assert.strictEqual(min.toString().includes('return'), true);
 assert.strictEqual(min.length, 2);
 assert.strictEqual(min.toString().includes('Math.min'), false);
 assert.notStrictEqual(min, Math.min);
@@ -29,4 +29,5 @@ assert.strictEqual(min(0, -2), -2);
 assert.strictEqual(min(-1, 10), -1);
 assert.strictEqual(min(-13.2, -222), -222);
 assert.strictEqual(min(132, 133), 132);
+assert.strictEqual(min(133, 133), "les deux nombres sont égaux");
 // End of tests */
