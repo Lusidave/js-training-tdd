@@ -16,6 +16,16 @@ const sourceObject = {
 };
 
 // Your code:
+function get(test) {
+  if (test == 'num')
+  {return sourceObject.num}
+  if (test=='bool')
+  {return sourceObject.bool}
+  if (test == 'str')
+  {return sourceObject.str}
+  if (test == 'log')
+  {return sourceObject.log}
+}
 
 //* Begin of tests
 const assert = require('assert');
